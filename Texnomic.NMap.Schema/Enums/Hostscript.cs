@@ -20,8 +20,8 @@ namespace Texnomic.NMap.Schema.Enums
         public long Id { get; set; }
 
         [XmlElement("script")]
-        [field: XmlIgnore()]
-        public Collection<Script> Script { get; private set; }
+        
+        public Collection<Script> Script { get; set; }
 
         /// <summary>
         /// <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="Hostscript" /> Klasse.</para>

@@ -21,8 +21,8 @@ namespace Texnomic.NMap.Schema.Enums
         public long Id { get; set; }
 
         [XmlElement("extrareasons")]
-        [field: XmlIgnore()]
-        public Collection<Extrareasons> Extrareasons { get; private set; }
+        
+        public Collection<Extrareasons> Extrareasons { get; set; }
 
         /// <summary>
         /// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Extrareasons-Collection leer ist.</para>

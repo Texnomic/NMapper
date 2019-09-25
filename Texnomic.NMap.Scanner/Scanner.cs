@@ -9,7 +9,7 @@ using System.Globalization;
 using System.Linq;
 using System.Net.NetworkInformation;
 using Texnomic.NMap.Schema;
-using Texnomic.NMap.Schema.Enums;
+using Texnomic.NMap.Schema.Models;
 
 namespace Texnomic.NMap.Scanner
 {

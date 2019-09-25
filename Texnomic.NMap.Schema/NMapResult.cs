@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Serialization;
-using System.ComponentModel.DataAnnotations;
 using Texnomic.NMap.Schema.Enums;
+using Texnomic.NMap.Schema.Models;
 
 namespace Texnomic.NMap.Schema
 {
@@ -9,64 +9,61 @@ namespace Texnomic.NMap.Schema
     [XmlRoot("nmaprun")]
     public class NMapResult
     {
-        [KeyAttribute()]
-        public long ID { get; set; }
+        [XmlElement("scaninfo")]
+        public List<ScanInfo> ScanInfo { get; set; } 
 
-        [XmlElementAttribute("scaninfo")]
-        public List<ScanInfo> ScanInfo { get; set; } = new List<ScanInfo>();
+        [XmlElement("verbose")]
+        public Verbose Verbose { get; set; }
 
-        [XmlElementAttribute("verbose")]
-        public Verbose Verbose { get; set; } = new Verbose();
+        [XmlElement("debugging")]
+        public Debugging Debugging { get; set; }
 
-        [XmlElementAttribute("debugging")]
-        public Debugging Debugging { get; set; } = new Debugging();
+        [XmlElement("target")]
+        public List<Target> Target { get; set; }
 
-        [XmlElementAttribute("target")]
-        public List<Target> Target { get; set; } = new List<Target>();
+        [XmlElement("taskbegin")]
+        public List<Taskbegin> TaskBegin { get; set; }
 
-        [XmlElementAttribute("taskbegin")]
-        public List<Taskbegin> TaskBegin { get; set; } = new List<Taskbegin>();
+        [XmlElement("taskprogress")]
+        public List<Taskprogress> TaskProgress { get; set; }
 
-        [XmlElementAttribute("taskprogress")]
-        public List<Taskprogress> TaskProgress { get; set; } = new List<Taskprogress>();
+        [XmlElement("taskend")]
+        public List<Taskend> TaskEnd { get; set; }
 
-        [XmlElementAttribute("taskend")]
-        public List<Taskend> TaskEnd { get; set; } = new List<Taskend>();
+        [XmlElement("prescript")]
+        public List<Prescript> Prescript { get; set; }
 
-        [XmlElementAttribute("prescript")]
-        public List<Prescript> Prescript { get; set; } = new List<Prescript>();
+        [XmlElement("postscript")] 
+        public List<Postscript> Postscript { get; set; }
 
-        [XmlElementAttribute("postscript")] 
-        public List<Postscript> Postscript { get; set; } = new List<Postscript>();
+        [XmlElement("host")] 
+        public List<Host> Hosts { get; set; }
 
-        [XmlElementAttribute("host")] 
-        public List<Host> Hosts { get; set; } = new List<Host>();
+        [XmlElement("output")] 
+        public List<Output> Output { get; set; }
 
-        [XmlElementAttribute("output")] 
-        public List<Output> Output { get; set; } = new List<Output>();
+        [XmlElement("runstats")] 
+        public RunStatistics RunStatistics { get; set; }
 
-        [XmlElementAttribute("runstats")] 
-        public RunStats RunStats { get; set; } = new RunStats();
+        [XmlAttribute("scanner")]
+        public string Scanner { get; set; }
 
-        [XmlAttributeAttribute("scanner")]
-        public NMapRunScanner Scanner { get; set; }
-
-        [XmlAttributeAttribute("args")]
+        [XmlAttribute("args")]
         public string Args { get; set; }
 
-        [XmlAttributeAttribute("start")]
+        [XmlAttribute("start")]
         public string Start { get; set; }
 
-        [XmlAttributeAttribute("startstr")]
+        [XmlAttribute("startstr")]
         public string StartString { get; set; }
 
-        [XmlAttributeAttribute("version")]
+        [XmlAttribute("version")]
         public string Version { get; set; }
 
-        [XmlAttributeAttribute("profile_name")]
+        [XmlAttribute("profile_name")]
         public string ProfileName { get; set; }
 
-        [XmlAttributeAttribute("xmloutputversion")]
+        [XmlAttribute("xmloutputversion")]
         public string XmlOutputVersion { get; set; }
     }
 }

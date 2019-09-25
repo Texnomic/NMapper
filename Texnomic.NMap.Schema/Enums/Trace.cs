@@ -21,8 +21,8 @@ namespace Texnomic.NMap.Schema.Enums
         public long Id { get; set; }
 
         [XmlElement("hop")]
-        [field: XmlIgnore()]
-        public Collection<Hop> Hop { get; private set; }
+        
+        public Collection<Hop> Hop { get; set; }
 
         /// <summary>
         /// <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Hop-Collection leer ist.</para>

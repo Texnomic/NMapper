@@ -5,19 +5,22 @@ namespace Texnomic.NMap.Schema.Enums
 {
     [GeneratedCode("XmlSchemaClassGenerator", "2.0.0.0")]
     [XmlType("ScaninfoProtocol")]
-    public enum ScanInfoProtocol
+    public enum Protocol
     {
 
         [XmlEnum("ip")]
-        Ip,
+        IP,
 
         [XmlEnum("tcp")]
-        Tcp,
+        TCP,
 
         [XmlEnum("udp")]
-        Udp,
+        UDP,
 
         [XmlEnum("sctp")]
-        Sctp,
+        SCTP,
+
+        [XmlEnum("rpc")] 
+        RPC,
     }
 }
